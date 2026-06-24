@@ -7,20 +7,12 @@
 
 
 def miniMaxSum(arr):
-    index = 0  #O(1)
-    sum_arr = [] #O(1)
-    
-    for element in range(len(arr)): #=(n)
-        new_list = arr[:index] + arr[index + 1:] # O(n)
-        total = sum(new_list) # O(n)
-        sum_arr.append(total) # O(1)
-        
-        index += 1 # O(n)
-              
-    print(min(sum_arr), max(sum_arr))
-    
+    total = sum(arr) # O(n)
+    min_sum = total - max(arr) # O(n)
+    max_sum = total - min(arr) # O(n)
+
+    print(min_sum, max_sum) # O(1)
 
 
-
-miniMaxSum([1, 2, 3, 4, 5]) # 10 14   ---> O(n^2) because of the nested loops and sum function. The overall time complexity is O(n^2)
-miniMaxSum([7, 69, 2, 221, 8974]) # 299 9271   ---> O(n^2) because of the nested loops and sum function. The overall time complexity is O(n^2)
+miniMaxSum([1, 2, 3, 4, 5]) # 10 14   ---> O(n) 
+miniMaxSum([7, 69, 2, 221, 8974]) # 299 9271   ---> O(n) 
