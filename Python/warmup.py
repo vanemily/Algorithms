@@ -16,4 +16,4 @@ def birthdayCakeCandles(candles):
 
 
 
-print(birthdayCakeCandles([3, 2, 1, 3])) # 2
+print(birthdayCakeCandles([3, 2, 1, 3])) # 2  --->  Time complexity: O(n) - Space complexity: O(1)
